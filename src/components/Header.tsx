@@ -50,7 +50,7 @@ const Header = ({ btnRef, onOpen }: handleClickProps) => {
               fontSize={"3xl"}
               cursor={"pointer"}
               ref={btnRef}
-              colorScheme="teal"
+              colorscheme="teal"
               onClick={onOpen}
               ml={"30px"}
             />

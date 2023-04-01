@@ -10,6 +10,7 @@ import {
   Text,
   CloseButton,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 type activeProps = {
   isOpen: boolean;
@@ -18,14 +19,27 @@ type activeProps = {
 };
 
 const Dashboard = ({ isOpen, onClose, btnRef }: activeProps) => {
-  const listItems = ["Home", "About", "Contact"];
+  const listItems = [
+    {
+      list: "Home",
+      path: "/",
+    },
+    {
+      list: "About",
+      path: "/about",
+    },
+    {
+      list: "Contact",
+      path: "/contact",
+    },
+  ];
   return (
     <>
       <Drawer
         isOpen={isOpen}
         placement="left"
         onClose={onClose}
-        finalFocusRef={btnRef}
+        initialFocusRef={btnRef}
       >
         <DrawerOverlay />
         <DrawerContent>
@@ -43,19 +57,20 @@ const Dashboard = ({ isOpen, onClose, btnRef }: activeProps) => {
           <DrawerBody>
             <List mt={"20px"}>
               {listItems.map((item, id) => (
-                <ListItem
-                  key={id}
-                  p={"20px"}
-                  fontSize={"1.2rem"}
-                  cursor={"pointer"}
-                  onClick={onClose}
-                  w={"100%"}
-                  my={"10px"}
-                  borderRadius={"10px"}
-                  _hover={{ bg: "blackAlpha.100" }}
-                >
-                  {item}
-                </ListItem>
+                <Link to={item.path} key={id}>
+                  <ListItem
+                    p={"20px"}
+                    fontSize={"1.2rem"}
+                    cursor={"pointer"}
+                    onClick={onClose}
+                    w={"100%"}
+                    my={"10px"}
+                    borderRadius={"10px"}
+                    _hover={{ bg: "blackAlpha.100" }}
+                  >
+                    {item.list}
+                  </ListItem>
+                </Link>
               ))}
             </List>
           </DrawerBody>
