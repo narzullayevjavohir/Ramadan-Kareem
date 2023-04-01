@@ -2,7 +2,7 @@ import { EmailIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Button, Divider, List, ListItem, Text } from "@chakra-ui/react";
 
 type handleClickProps = {
-  btnRef: React.MutableRefObject<undefined>;
+  btnRef: undefined;
   onOpen: () => void;
 };
 
@@ -50,7 +50,7 @@ const Header = ({ btnRef, onOpen }: handleClickProps) => {
               fontSize={"3xl"}
               cursor={"pointer"}
               ref={btnRef}
-              colorscheme="teal"
+              color={"black"}
               onClick={onOpen}
               ml={"30px"}
             />

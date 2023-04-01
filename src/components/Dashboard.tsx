@@ -35,12 +35,7 @@ const Dashboard = ({ isOpen, onClose, btnRef }: activeProps) => {
   ];
   return (
     <>
-      <Drawer
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        initialFocusRef={btnRef}
-      >
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader mt={"12vh"}>

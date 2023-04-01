@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef();
+  const btnRef = useRef<undefined>();
 
   return (
     <>
