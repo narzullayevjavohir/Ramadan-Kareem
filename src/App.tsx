@@ -10,13 +10,12 @@ import Contact from "./pages/Contact";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef<undefined>();
 
   return (
     <>
-      <Header onOpen={onOpen} btnRef={btnRef} />
+      <Header onOpen={onOpen} />
       <Flex>
-        <Dashboard isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
+        <Dashboard isOpen={isOpen} onClose={onClose} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

@@ -14,9 +14,9 @@ const Footer = () => {
           <Text fontSize={{ md: "20px", sm: "18px" }}>
             &copy; All right reserved {new Date().getFullYear()}
           </Text>
-          <Text display={"flex"} fontSize={{ md: "16px", sm: "14px" }}>
+          <Text as={"p"} display={"flex"} fontSize={{ md: "16px", sm: "14px" }}>
             Created by
-            <Text color={"purple.400"} ml={"5px"}>
+            <Text as={"span"} color={"purple.400"} ml={"5px"}>
               Narzullayev Javohir
             </Text>
           </Text>

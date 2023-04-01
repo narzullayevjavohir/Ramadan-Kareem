@@ -15,10 +15,9 @@ import { Link } from "react-router-dom";
 type activeProps = {
   isOpen: boolean;
   onClose: () => void;
-  btnRef: React.MutableRefObject<undefined>;
 };
 
-const Dashboard = ({ isOpen, onClose, btnRef }: activeProps) => {
+const Dashboard = ({ isOpen, onClose }: activeProps) => {
   const listItems = [
     {
       list: "Home",

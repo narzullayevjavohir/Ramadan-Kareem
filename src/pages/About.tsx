@@ -68,26 +68,24 @@ const About = () => {
               }
             })
             .map((item, id) => (
-              <>
-                <Card w={"300px"} h={"400px"} m={"20px"} key={id}>
-                  <CardHeader>
-                    <Image
-                      src={item.imgUrl}
-                      w={"100%"}
-                      h={"160px"}
-                      objectFit={"cover"}
-                      borderRadius={"4px"}
-                    />
-                  </CardHeader>
-                  <CardBody>
-                    <Text fontSize={"18px"} mb={"3px"}>
-                      {item.title}
-                    </Text>
-                    <Text fontSize={"14px"}>{item.description}</Text>
-                    <Button mt={"10px"}>Read more</Button>
-                  </CardBody>
-                </Card>
-              </>
+              <Card w={"300px"} h={"400px"} m={"20px"} key={id}>
+                <CardHeader>
+                  <Image
+                    src={item.imgUrl}
+                    w={"100%"}
+                    h={"160px"}
+                    objectFit={"cover"}
+                    borderRadius={"4px"}
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Text fontSize={"18px"} mb={"3px"}>
+                    {item.title}
+                  </Text>
+                  <Text fontSize={"14px"}>{item.description}</Text>
+                  <Button mt={"10px"}>Read more</Button>
+                </CardBody>
+              </Card>
             ))}
         </Box>
       </Box>

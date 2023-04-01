@@ -2,11 +2,10 @@ import { EmailIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Button, Divider, List, ListItem, Text } from "@chakra-ui/react";
 
 type handleClickProps = {
-  btnRef: undefined;
   onOpen: () => void;
 };
 
-const Header = ({ btnRef, onOpen }: handleClickProps) => {
+const Header = ({ onOpen }: handleClickProps) => {
   return (
     <Box position={"sticky"} top={"0"} overflow={"hidden"} zIndex={"99999"}>
       <Box
@@ -49,7 +48,6 @@ const Header = ({ btnRef, onOpen }: handleClickProps) => {
             <HamburgerIcon
               fontSize={"3xl"}
               cursor={"pointer"}
-              ref={btnRef}
               color={"black"}
               onClick={onOpen}
               ml={"30px"}

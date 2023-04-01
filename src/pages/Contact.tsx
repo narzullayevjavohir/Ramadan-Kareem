@@ -14,9 +14,6 @@ import { FormEvent, useState } from "react";
 const Contact = () => {
   const [show, setShow] = useState<boolean>(false);
   const handleClick = () => setShow(!show);
-  const [value, setValue] = useState<string>("");
-  const [pass, setPass] = useState<string>("");
-  const [clickVal, setClickVal] = useState<boolean>(false);
 
   const handleSubmit = (e: FormEvent<HTMLDivElement>) => {
     e.preventDefault();
