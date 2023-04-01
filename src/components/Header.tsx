@@ -18,8 +18,8 @@ const Header = ({ btnRef, onOpen }: handleClickProps) => {
         alignItems={"center"}
         px={{ md: "0", sm: "15px" }}
       >
-        <Text fontSize={"1.5rem"} fontWeight={"semibold"}>
-          Narzullayev
+        <Text fontSize={"1.5rem"} fontWeight={"semibold"} cursor={"pointer"}>
+          Ramadan
         </Text>
         <List display={"flex"} alignItems={"center"}>
           <ListItem mx={"25px"} display={{ lg: "block", sm: "none" }}>

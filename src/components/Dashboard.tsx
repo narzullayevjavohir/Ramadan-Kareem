@@ -25,7 +25,7 @@ const Dashboard = ({ isOpen, onClose, btnRef }: activeProps) => {
       path: "/",
     },
     {
-      list: "About",
+      list: "Greeting",
       path: "/about",
     },
     {
